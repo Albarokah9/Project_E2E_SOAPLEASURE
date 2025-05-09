@@ -1,0 +1,70 @@
+🔑 Positive Test Cases (Skenario Berhasil)
+Login dengan email dan password yang valid
+
+Expected result: Pengguna berhasil login dan diarahkan ke halaman dashboard/homepage.
+
+Login dengan menekan tombol 'Enter' di keyboard setelah mengisi data
+
+Expected result: Login berhasil seperti saat klik tombol "Login".
+
+🚫 Negative Test Cases (Skenario Gagal)
+Login dengan email valid tapi password salah
+
+Expected result: Muncul pesan error seperti "Invalid email address or password".
+
+Login dengan email salah tapi password valid
+
+Expected result: Muncul pesan error seperti "Invalid email address or password".
+
+Login dengan email dan password yang salah
+
+Expected result: Muncul pesan error Invalid email address or password.
+
+Login dengan format email yang tidak valid (contoh: username@domain)
+
+Expected result: Muncul pesan error seperti "Invalid email address or password".
+
+Login dengan kolom email kosong
+
+Expected result: Validasi muncul “Email address is required”.
+
+Login dengan kolom password kosong
+
+Expected result: Validasi muncul “Please enter your password”. -->
+
+Login tanpa mengisi kedua kolom
+
+Expected result: Validasi muncul “Email address is required” dan “Please enter your password”. -->
+
+Login menggunakan akun yang belum terverifikasi (jika sistem mendukung verifikasi email)
+
+Expected result: Muncul pesan seperti "Akun belum diverifikasi".
+
+Actual result:  Ketika mendaftar akun baru menggunakan email maka akan mendapatkan pesan berupa "Thank you for registering, We have sent a confirmation link to test@gmail.com, please check your inbox / spam folder", maka seharusnya ketika login menggunakan akun yang belum terverifikasi akan mendapatkan pesan berupa "Warning: Your account requires approval before you can login", tapi berhasil tetap bisa login dan diarahkan ke dasbord
+
+🔐 Security Test Cases
+Login setelah beberapa kali percobaan gagal (brute force protection)
+
+Expected result: Akun diblokir sementara atau captcha muncul.
+
+Pastikan password tidak terlihat (masking karakter saat diketik)
+
+Expected result: Karakter password ditampilkan sebagai titik/bintang.
+
+Pastikan field password tidak disimpan di browser saat autofill
+
+Expected result: Tidak ada autofill kecuali user menyetujuinya.
+
+🧪 Functional & UX Test Cases
+Tombol "Login" tidak aktif jika field belum diisi lengkap
+
+Expected result: Tombol login ter-disable sampai form lengkap.
+
+Cek navigasi ke halaman lupa password / register
+
+Expected result: Link bekerja dengan benar.
+
+Tes kompatibilitas login di berbagai perangkat & browser
+
+Expected result: Fungsi login tetap berjalan baik di semua environment.
+

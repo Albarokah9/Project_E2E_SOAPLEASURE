@@ -1,0 +1,11 @@
+Test Case ID	Test Case Scenario	                                Priority
+TC01	        Login berhasil dengan email & password valid	    High
+TC02	        Login tekan Enter setelah isi data	                Medium
+TC03	        Login dengan email valid & password salah	        High
+TC04	        Login dengan email salah & password valid	        High
+TC05	        Login dengan email & password salah	                High
+TC06	        Login dengan format email tidak valid	            Medium
+TC07	        Login dengan kolom email kosong	                    High
+TC08	        Login dengan kolom password kosong	                High
+TC09	        Login tanpa mengisi kedua kolom	                    High
+TC10	        Login dengan akun belum terverifikasi	            Medium 

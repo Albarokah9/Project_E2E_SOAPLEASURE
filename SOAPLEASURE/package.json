@@ -1,0 +1,40 @@
+{
+  "name": "soapleasure",
+  "version": "1.0.0",
+  "description": "Project Portofolio E2E",
+  "main": "index.js",
+  "author": "Albarokah Rifansah Sutanto Putra",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^14.3.3"
+  },
+  "scripts": {
+    "test:open:chrome": "cypress open --browser chrome",
+    "test:open:firefox": "cypress open --browser firefox",
+    "test:open:edge": "cypress open --browser edge",
+    "test:open:electron": "cypress open --browser electron",
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:smoke": "cypress run --env grepTags=@smoke",
+    "lint": "eslint cypress/**/*.js",
+    "format": "prettier --write \"cypress/**/*.js\"",
+    "report": "npx mochawesome-merge cypress/results/*.json | npx mochawesome-report-generator --reportDir cypress/reports",
+    "clean:results": "rm -rf cypress/results cypress/reports",
+    "test:ci": "npm run clean:results && npm run test && npm run report && open cypress/reports/mochawesome.html",
+    "format:test": "prettier --write \"cypress/**/*.js\""
+  },
+  "cypress": {
+    "video": false,
+    "screenshotOnRunFailure": false,
+    "env": {
+      "grepTags": "@smoke"
+    },
+    "reporter": "mochawesome",
+    "reporterOptions": {
+      "overwrite": false,
+      "html": true,
+      "json": true,
+      "reportDir": "cypress/results"
+    }
+  }
+}

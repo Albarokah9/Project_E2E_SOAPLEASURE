@@ -1,0 +1,38 @@
+/// <reference types="cypress" />
+
+{
+"devDependencies": {
+"cypress": "^14.3.3"
+},
+"scripts": {
+// 🔁 Menjalankan semua test (headless)
+"test": "cypress run",
+
+// 👀 Menjalankan Cypress dalam mode GUI (untuk debug/test manual)
+"test\:open": "cypress open",
+
+// 📂 Menjalankan test untuk environment staging
+"test\:staging": "CYPRESS\_baseUrl=[https://staging.soapleasure.com](https://staging.soapleasure.com) cypress run",
+
+// 🧪 Menjalankan hanya test dengan tag tertentu (jika pakai tag plugin)
+"test\:smoke": "cypress run --env grepTags=@smoke",
+
+// 🔍 Linting (quality check) terhadap file test (jika pakai ESLint)
+"lint": "eslint cypress/\*\*/\*.js",
+
+// 🧹 Format file test agar rapi (jika pakai Prettier)
+"format": "prettier --write "cypress/\*\*/\*.js"",
+
+// 📊 Membuka report hasil test (jika pakai Mochawesome)
+"report": "npx mochawesome-merge cypress/results/\*.json | npx mochawesome-report-generator --reportDir
+cypress/reports",
+
+// 📦 Clean folder hasil test sebelumnya
+"clean\:results": "rm -rf cypress/results cypress/reports",
+
+// 🚀 Run test + generate report + buka hasilnya
+"test\:ci": "npm run clean\:results && npm run test && npm run report && open cypress/reports/mochawesome.html"
+}
+
+}
+    
