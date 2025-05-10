@@ -26,11 +26,10 @@
 
 // Selow type command
 Cypress.Commands.add('slowType', (selector, text, delay = 200) => {
-    cy.get(selector).type(text, { delay });
+  cy.get(selector).type(text, { delay });
 });
 
 // Slow type command with assertion
 Cypress.Commands.add('slowType', (selector, text, delay = 100) => {
-    cy.get(selector).should('be.visible').type(text, { delay });
-  });
-  
+  cy.get(selector).should('be.visible').type(text, { delay });
+});
