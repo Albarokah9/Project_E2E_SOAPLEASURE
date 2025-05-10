@@ -43,28 +43,8 @@ Expected result: Muncul pesan seperti "Akun belum diverifikasi".
 Actual result:  Ketika mendaftar akun baru menggunakan email maka akan mendapatkan pesan berupa "Thank you for registering, We have sent a confirmation link to test@gmail.com, please check your inbox / spam folder", maka seharusnya ketika login menggunakan akun yang belum terverifikasi akan mendapatkan pesan berupa "Warning: Your account requires approval before you can login", tapi berhasil tetap bisa login dan diarahkan ke dasbord
 
 🔐 Security Test Cases
-Login setelah beberapa kali percobaan gagal (brute force protection)
-
-Expected result: Akun diblokir sementara atau captcha muncul.
-
 Pastikan password tidak terlihat (masking karakter saat diketik)
 
 Expected result: Karakter password ditampilkan sebagai titik/bintang.
 
-Pastikan field password tidak disimpan di browser saat autofill
-
-Expected result: Tidak ada autofill kecuali user menyetujuinya.
-
-🧪 Functional & UX Test Cases
-Tombol "Login" tidak aktif jika field belum diisi lengkap
-
-Expected result: Tombol login ter-disable sampai form lengkap.
-
-Cek navigasi ke halaman lupa password / register
-
-Expected result: Link bekerja dengan benar.
-
-Tes kompatibilitas login di berbagai perangkat & browser
-
-Expected result: Fungsi login tetap berjalan baik di semua environment.
 
