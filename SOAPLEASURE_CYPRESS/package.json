@@ -36,5 +36,6 @@
       "json": true,
       "reportDir": "cypress/results"
     }
-  }
+  },
+  "repository": "https://github.com/Albarokah9/Project_E2E_SOAPLEASURE.git"
 }
